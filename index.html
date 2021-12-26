@@ -1,36 +1,42 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>alireza's calculator </title>
-
+        <title>Simple Interest Calculator</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div class="maindiv">
-        <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        rate<input type="range"  <span id="rate_val">10.25%</span> min="1" max="20" value="10.25"> <br/>
-        No. of Years <input type="number"  <select id="years">
-    <option value="1">1</option>
-    <!-- fill in the rest of the values-->
-</select>  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute Interest</button>
+        <h1 id="title">Simple Interest Calculator</h1>
+        <div class="interestdiv">
+        Amount <input class="amount" type="number" autofocus="on" id="principal" name="principal">  <br/><br/>
+        Rate <input class="rate" type="range" onchange="updateRate()" id="rate" min=1 max=20 step=0.25 value=10.25>
+        <span class="rate" id="rate_val">10.25%</span>
+        <br/><br/>
+        No. of Years <select class="year" id="years">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>  
+        <br/><br/>
+        <input type="button" value="Compute Interest" onclick="compute()">
     
-    <span id="result">
-
-</span>
+        <br/>
+        <br/>
+        Interest : <span id="result"></span>
+        
+        <br/>
+    </div>
+    <br/>
+        <footer>&#169; this Calculator belongs to Chethan</footer>
+    </div>
     
-    <footer>
-
-        &#169; This Calculator belongs to --your name--
-
-
-</footer>
-            </div>
-
     </body>
 </html>
